@@ -34,5 +34,10 @@
 
 .header_theme-btn--sun{
     background-image: url(../assets/icons/sun.svg);
+    width: 2.75rem;
+    height: 2.25rem;
+    border-radius: .3125rem;
+    padding: .5625rem, .875rem, .5625rem;
+    gap: .625rem;
     background-repeat: no-repeat;
 }

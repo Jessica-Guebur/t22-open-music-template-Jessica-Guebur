@@ -57,7 +57,7 @@ function creatCardMusic(list){
 
 
 function main(){
-    // renderDarkMode();
+    renderDarkMode();
     applyInputRangeStyle();
     creatCardMusic(listadeálbuns);
     renderCards(listadeálbuns);
