@@ -5,7 +5,7 @@ const fetchMusic = async (listId) => {
     const data = await fetch(url, {
         method: "GET",
         headers: {
-            'Content-Type':'aplication/json'
+            'Content-Type':'application/json'
         }
     })
     .then(response => response.json())
