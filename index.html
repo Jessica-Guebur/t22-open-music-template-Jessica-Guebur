@@ -3,29 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open Music</title>
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <script type="module" src="./src/scripts/index.js" defer></script>
+    <title>open Music</title>
   </head>
   <body>
     <!-- CABEÇALHO -->
-    <header>
-      <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
+    <header class="header">
+      <h1 class="header_title"><span>O</span>pen <span>m</span>usic</h1>
+      <button class="header_theme-btn"></button>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-      <!-- SEÇÃO DE FILTRO POR GENERO -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+      <section class="all-genre">
+        <h3 class="genre_title">Gênero Musical</h3>
+        <nav class="genre">
+          <a class="genre-type">Todos</a>
+          <a class="genre-type">Pop</a>
+          <a class="genre-type">MPB</a>
+          <a class="genre-type">Forró</a>
+          <a class="genre-type">Samba</a>
+          <a class="genre-type">Baião</a>
+          <a class="genre-type">Rap</a>
+          <a class="genre-type">Hip-Hop</a>
+        </nav>
       </section>
 
       <!-- SEÇÃO DE FILTRO POR PREÇO -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+      <section class="filter_price">
+        <div class="filter_div">
+          <h3 class="filter_title">Definir Preço</h3>
+          <p>Até <span class="color_price">R$100,00</span></p>
+        </div>
+        <form class="filter_form">
+            <input class="filter" id="price" type="range" min="0" max="100" value="100">
+        </form>
       </section>
 
       <!-- SEÇÃO DE ALBUNS -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+      <section class="cards">
+        <ul class="list_card">
+          <h3 class="card_title">Albuns Encontrados</h3>
+          <li class="card">
+            <img class="card_img" src="./src/assets/imgs/cover-1.png" alt="Imagem da Capa de Álbum">
+            <h4 class="card_title_album">Acabou o Chorare</h4>
+            <div class="div_card">
+              <span class="card_name_band">Novos Baianos</span>
+              <span class="card_genre">MPB</span>
+            </div>
+            <div class="div_price">
+              <span class="card_price">R$ 137,91</span>
+              <button class="card-btn">Comprar</button>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
   </body>
