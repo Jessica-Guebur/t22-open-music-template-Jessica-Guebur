@@ -16,6 +16,8 @@
 }
 
 .genre{
+    max-width: 64rem;
+    flex-wrap: wrap;
     display: flex;
     gap: 1.5625rem;
     padding: 1rem 0rem 1rem 0rem;

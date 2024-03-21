@@ -41,7 +41,7 @@ body{
 
     background-color: var(--color-gray-8);
 
-    width: 64rem;
+    max-width: 64rem;
     height: 98.875rem;
     margin: 0 auto;
 }
