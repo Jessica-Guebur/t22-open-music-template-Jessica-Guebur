@@ -1,6 +1,7 @@
 import { applyInputRangeStyle } from "./inputRange.js";
 import {listadeálbuns } from "./albumsDataBase.js";
 import { renderDarkMode } from "./theme.js";
+import { mountMusicArray } from "./api.js";
 
 
 function creatCardMusic(list){
@@ -80,12 +81,14 @@ function creatCardMusic(list){
 
 
 
-function routine(){
+async function routine(){
     renderDarkMode();
+    mountMusicArray()
     applyInputRangeStyle();
     creatCardMusic(listadeálbuns);
     renderCards(listadeálbuns);
     filterPrice(listadeálbuns);
 }
+console.log(mountMusicArray)
 
 routine();
