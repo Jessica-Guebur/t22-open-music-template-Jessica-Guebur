@@ -1,8 +1,9 @@
 import { applyInputRangeStyle } from "./inputRange.js";
 import {listadeálbuns } from "./albumsDataBase.js";
-import { renderDarkMode } from "./theme.js";
-import { mountMusicArray } from "./api.js";
+import {renderDarkMode} from "./theme.js";
+import { fetchMusic } from "./api.js";
 
+let arrayMusic = [];
 
 function creatCardMusic(list){
     const liMusic = document.createElement("li");
@@ -24,11 +25,11 @@ function creatCardMusic(list){
     // Adicionar Conteúdos Internos 
 
     imgMusic.src = list.img;
-    imgMusic.alt = `Imagem do album ${list.título}`;
-    h4Music.innerText = list.título;
-    spanMusicBand.innerText = list.banda;
-    spanMusicGenre.innerText = list.gênero;
-    spanPrice.innerText = `R$ ${list.preço}`;
+    imgMusic.alt = `Imagem do album ${list.title}`;
+    h4Music.innerText = list.title;
+    spanMusicBand.innerText = list.band;
+    spanMusicGenre.innerText = list.genre;
+    spanPrice.innerText = `R$ ${list.price}`;
     btnCard.innerText = `Comprar`;
 
     // Adicionando Classes 
@@ -71,7 +72,7 @@ function creatCardMusic(list){
 
       const filterMusic = listMusic.filter((item) => {
         return (
-          parseInt(item.preço) <= currentInputValue
+          parseInt(item.price) <= currentInputValue
         );
       });
       renderCards(filterMusic)
@@ -83,12 +84,12 @@ function creatCardMusic(list){
 
 async function routine(){
     renderDarkMode();
-    mountMusicArray()
+    arrayMusic = await fetchMusic();
+    console.log(arrayMusic)
     applyInputRangeStyle();
-    creatCardMusic(listadeálbuns);
-    renderCards(listadeálbuns);
-    filterPrice(listadeálbuns);
+    creatCardMusic(arrayMusic);
+    renderCards(arrayMusic);
+    filterPrice(arrayMusic);
 }
-console.log(mountMusicArray)
 
 routine();
