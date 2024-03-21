@@ -1,4 +1,6 @@
-.cards{}
+.cards{
+    display: flex;
+}
 
 .list_card{
     display: flex;
@@ -72,4 +74,8 @@
     padding: 1.25rem .625rem 1.25rem .625rem;
     display: flex;
     align-items: center;
+}
+
+.card-btn:hover{
+    background-color: var(--color-brand-1);
 }

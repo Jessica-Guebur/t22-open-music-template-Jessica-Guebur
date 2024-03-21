@@ -48,6 +48,7 @@ function creatCardMusic(list){
 
   function renderCards(listMusic){
     const ulMusicList = document.querySelector(".list_card");
+    ulMusicList.innerHTML = "";
 
     listMusic.forEach((list, index) => {
         const musicCard = creatCardMusic(list);
@@ -55,12 +56,36 @@ function creatCardMusic(list){
     })
   };
 
+  
 
-function main(){
+  function filterPrice(listMusic){
+    const filterForm = document.querySelector(".filter_form");
+    const spanFilter = document.querySelector(".color_price");
+    const filterInput = document.querySelector(".filter");
+
+    filterForm.addEventListener(`input`, (event) =>{
+
+      const currentInputValue = event.target.valueAsNumber;
+      spanFilter.innerText = currentInputValue.toFixed(2);
+
+      const filterMusic = listMusic.filter((item) => {
+        return (
+          parseInt(item.preço) <= currentInputValue
+        );
+      });
+      renderCards(filterMusic)
+    });
+  
+  }
+
+
+
+function routine(){
     renderDarkMode();
     applyInputRangeStyle();
     creatCardMusic(listadeálbuns);
     renderCards(listadeálbuns);
+    filterPrice(listadeálbuns);
 }
 
-main();
+routine();
