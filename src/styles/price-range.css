@@ -21,3 +21,26 @@
     height: 1.875rem;
     color: var(--color-brand-1);
 }
+
+/* Selecionando o elemento input range (selecione por id ou classe) */
+#price {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    background-color: var(--color-brand-2);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  #price::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0.5rem solid var(--color-brand-2);
+  }

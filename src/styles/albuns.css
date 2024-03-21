@@ -1,9 +1,9 @@
-.cards{
-
-}
+.cards{}
 
 .list_card{
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .card_title{

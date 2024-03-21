@@ -1,11 +1,11 @@
 export function applyInputRangeStyle() {
-    const inputRange = document.querySelector("seu_seletor_do_input_range_aqui");
+    const inputRange = document.querySelector("#price");
   
     inputRange.addEventListener("input", (event) => {
       const currentInputValue = event.target.value;
       const runnableTrackProgress = (currentInputValue / inputRange.max) * 100;
   
-      inputRange.style.background = `linear-gradient(to right, var(--sua-cor-primaria) ${runnableTrackProgress}%, var(--sua-cor-cinza-5) ${runnableTrackProgress}%)`;
+      inputRange.style.background = `linear-gradient(to right, var(--color-brand-1) ${runnableTrackProgress}%, var(--color-gray-5) ${runnableTrackProgress}%)`;
     });
   }
 

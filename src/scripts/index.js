@@ -1,5 +1,7 @@
 import { applyInputRangeStyle } from "./inputRange.js";
 import {listadeálbuns } from "./albumsDataBase.js";
+import { renderDarkMode } from "./theme.js";
+
 
 function creatCardMusic(list){
     const liMusic = document.createElement("li");
@@ -55,8 +57,9 @@ function creatCardMusic(list){
 
 
 function main(){
+    // renderDarkMode();
     applyInputRangeStyle();
-    creatCardMusic();
+    creatCardMusic(listadeálbuns);
     renderCards(listadeálbuns);
 }
 
